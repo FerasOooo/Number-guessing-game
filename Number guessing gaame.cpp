@@ -30,17 +30,11 @@ int main() {
 					std::cout << "Invalid Guess" << '\n';
 					std::cout << "Pls enter your guesse:";
 				}
-				winner(nump, numc, result);
-				while (!(std::cin >> nump)) {
-					std::cin.clear();
-					std::cin.ignore(100,'\n');
-					std::cout << "Invalid Guess" << '\n';
-					std::cout << "Pls enter your guesse:";
-				}
 				while (nump > 100 || nump < 0) {
 					std::cout << "please enter a number from 1 to 100:";
 					std::cin >> nump;
 				}
+				winner(nump, numc, result);
 				attempt += 1;
 				if (result == false) {
 					std::cout << "Congratulations! You guessed the correct number in" << attempt << "attempts.";
@@ -126,4 +120,5 @@ int main() {
 		std::cout << "The number is greater than " << nump << '\n';
 	}
 	return result;
+
 }
